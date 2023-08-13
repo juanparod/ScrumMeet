@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBBCDCE72A8888AE00610DE8 /* ScrumMeetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */; };
+		EBBCDCE92A8888AE00610DE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCE82A8888AE00610DE8 /* ContentView.swift */; };
+		EBBCDCEB2A8888AF00610DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBCDCEA2A8888AF00610DE8 /* Assets.xcassets */; };
+		EBBCDCEE2A8888AF00610DE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBCDCED2A8888AF00610DE8 /* Preview Assets.xcassets */; };
+		EBBCDCF82A8888AF00610DE8 /* ScrumMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCF72A8888AF00610DE8 /* ScrumMeetTests.swift */; };
+		EBBCDD022A8888AF00610DE8 /* ScrumMeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDD012A8888AF00610DE8 /* ScrumMeetUITests.swift */; };
+		EBBCDD042A8888AF00610DE8 /* ScrumMeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDD032A8888AF00610DE8 /* ScrumMeetUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBBCDCF42A8888AF00610DE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBBCDCDB2A8888AE00610DE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBBCDCE22A8888AE00610DE8;
+			remoteInfo = ScrumMeet;
+		};
+		EBBCDCFE2A8888AF00610DE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBBCDCDB2A8888AE00610DE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBBCDCE22A8888AE00610DE8;
+			remoteInfo = ScrumMeet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBBCDCE32A8888AE00610DE8 /* ScrumMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumMeetApp.swift; sourceTree = "<group>"; };
+		EBBCDCE82A8888AE00610DE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EBBCDCEA2A8888AF00610DE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBBCDCED2A8888AF00610DE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBBCDCF32A8888AF00610DE8 /* ScrumMeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumMeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBCDCF72A8888AF00610DE8 /* ScrumMeetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumMeetTests.swift; sourceTree = "<group>"; };
+		EBBCDCFD2A8888AF00610DE8 /* ScrumMeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumMeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBCDD012A8888AF00610DE8 /* ScrumMeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumMeetUITests.swift; sourceTree = "<group>"; };
+		EBBCDD032A8888AF00610DE8 /* ScrumMeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumMeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBBCDCE02A8888AE00610DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBCDCF02A8888AF00610DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBCDCFA2A8888AF00610DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBBCDCDA2A8888AE00610DE8 = {
+			isa = PBXGroup;
+			children = (
+				EBBCDCE52A8888AE00610DE8 /* ScrumMeet */,
+				EBBCDCF62A8888AF00610DE8 /* ScrumMeetTests */,
+				EBBCDD002A8888AF00610DE8 /* ScrumMeetUITests */,
+				EBBCDCE42A8888AE00610DE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBBCDCE42A8888AE00610DE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBBCDCE32A8888AE00610DE8 /* ScrumMeet.app */,
+				EBBCDCF32A8888AF00610DE8 /* ScrumMeetTests.xctest */,
+				EBBCDCFD2A8888AF00610DE8 /* ScrumMeetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBBCDCE52A8888AE00610DE8 /* ScrumMeet */ = {
+			isa = PBXGroup;
+			children = (
+				EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */,
+				EBBCDCE82A8888AE00610DE8 /* ContentView.swift */,
+				EBBCDCEA2A8888AF00610DE8 /* Assets.xcassets */,
+				EBBCDCEC2A8888AF00610DE8 /* Preview Content */,
+			);
+			path = ScrumMeet;
+			sourceTree = "<group>";
+		};
+		EBBCDCEC2A8888AF00610DE8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EBBCDCED2A8888AF00610DE8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBBCDCF62A8888AF00610DE8 /* ScrumMeetTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBBCDCF72A8888AF00610DE8 /* ScrumMeetTests.swift */,
+			);
+			path = ScrumMeetTests;
+			sourceTree = "<group>";
+		};
+		EBBCDD002A8888AF00610DE8 /* ScrumMeetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBBCDD012A8888AF00610DE8 /* ScrumMeetUITests.swift */,
+				EBBCDD032A8888AF00610DE8 /* ScrumMeetUITestsLaunchTests.swift */,
+			);
+			path = ScrumMeetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBBCDCE22A8888AE00610DE8 /* ScrumMeet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBCDD072A8888AF00610DE8 /* Build configuration list for PBXNativeTarget "ScrumMeet" */;
+			buildPhases = (
+				EBBCDCDF2A8888AE00610DE8 /* Sources */,
+				EBBCDCE02A8888AE00610DE8 /* Frameworks */,
+				EBBCDCE12A8888AE00610DE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrumMeet;
+			productName = ScrumMeet;
+			productReference = EBBCDCE32A8888AE00610DE8 /* ScrumMeet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBBCDCF22A8888AF00610DE8 /* ScrumMeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBCDD0A2A8888AF00610DE8 /* Build configuration list for PBXNativeTarget "ScrumMeetTests" */;
+			buildPhases = (
+				EBBCDCEF2A8888AF00610DE8 /* Sources */,
+				EBBCDCF02A8888AF00610DE8 /* Frameworks */,
+				EBBCDCF12A8888AF00610DE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBBCDCF52A8888AF00610DE8 /* PBXTargetDependency */,
+			);
+			name = ScrumMeetTests;
+			productName = ScrumMeetTests;
+			productReference = EBBCDCF32A8888AF00610DE8 /* ScrumMeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBBCDCFC2A8888AF00610DE8 /* ScrumMeetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBCDD0D2A8888AF00610DE8 /* Build configuration list for PBXNativeTarget "ScrumMeetUITests" */;
+			buildPhases = (
+				EBBCDCF92A8888AF00610DE8 /* Sources */,
+				EBBCDCFA2A8888AF00610DE8 /* Frameworks */,
+				EBBCDCFB2A8888AF00610DE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBBCDCFF2A8888AF00610DE8 /* PBXTargetDependency */,
+			);
+			name = ScrumMeetUITests;
+			productName = ScrumMeetUITests;
+			productReference = EBBCDCFD2A8888AF00610DE8 /* ScrumMeetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBBCDCDB2A8888AE00610DE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EBBCDCE22A8888AE00610DE8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EBBCDCF22A8888AF00610DE8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EBBCDCE22A8888AE00610DE8;
+					};
+					EBBCDCFC2A8888AF00610DE8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EBBCDCE22A8888AE00610DE8;
+					};
+				};
+			};
+			buildConfigurationList = EBBCDCDE2A8888AE00610DE8 /* Build configuration list for PBXProject "ScrumMeet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBBCDCDA2A8888AE00610DE8;
+			productRefGroup = EBBCDCE42A8888AE00610DE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBBCDCE22A8888AE00610DE8 /* ScrumMeet */,
+				EBBCDCF22A8888AF00610DE8 /* ScrumMeetTests */,
+				EBBCDCFC2A8888AF00610DE8 /* ScrumMeetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBBCDCE12A8888AE00610DE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBCDCEE2A8888AF00610DE8 /* Preview Assets.xcassets in Resources */,
+				EBBCDCEB2A8888AF00610DE8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBCDCF12A8888AF00610DE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBCDCFB2A8888AF00610DE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBBCDCDF2A8888AE00610DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBCDCE92A8888AE00610DE8 /* ContentView.swift in Sources */,
+				EBBCDCE72A8888AE00610DE8 /* ScrumMeetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBCDCEF2A8888AF00610DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBCDCF82A8888AF00610DE8 /* ScrumMeetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBCDCF92A8888AF00610DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBCDD042A8888AF00610DE8 /* ScrumMeetUITestsLaunchTests.swift in Sources */,
+				EBBCDD022A8888AF00610DE8 /* ScrumMeetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBBCDCF52A8888AF00610DE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBBCDCE22A8888AE00610DE8 /* ScrumMeet */;
+			targetProxy = EBBCDCF42A8888AF00610DE8 /* PBXContainerItemProxy */;
+		};
+		EBBCDCFF2A8888AF00610DE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBBCDCE22A8888AE00610DE8 /* ScrumMeet */;
+			targetProxy = EBBCDCFE2A8888AF00610DE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EBBCDD052A8888AF00610DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBBCDD062A8888AF00610DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBBCDD082A8888AF00610DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScrumMeet/Preview Content\"";
+				DEVELOPMENT_TEAM = C49J53BA5M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misfitapps.ScrumMeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBBCDD092A8888AF00610DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScrumMeet/Preview Content\"";
+				DEVELOPMENT_TEAM = C49J53BA5M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misfitapps.ScrumMeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBBCDD0B2A8888AF00610DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C49J53BA5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misfitapps.ScrumMeetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrumMeet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScrumMeet";
+			};
+			name = Debug;
+		};
+		EBBCDD0C2A8888AF00610DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C49J53BA5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misfitapps.ScrumMeetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrumMeet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScrumMeet";
+			};
+			name = Release;
+		};
+		EBBCDD0E2A8888AF00610DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C49J53BA5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misfitapps.ScrumMeetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScrumMeet;
+			};
+			name = Debug;
+		};
+		EBBCDD0F2A8888AF00610DE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C49J53BA5M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.misfitapps.ScrumMeetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScrumMeet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBBCDCDE2A8888AE00610DE8 /* Build configuration list for PBXProject "ScrumMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBCDD052A8888AF00610DE8 /* Debug */,
+				EBBCDD062A8888AF00610DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBBCDD072A8888AF00610DE8 /* Build configuration list for PBXNativeTarget "ScrumMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBCDD082A8888AF00610DE8 /* Debug */,
+				EBBCDD092A8888AF00610DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBBCDD0A2A8888AF00610DE8 /* Build configuration list for PBXNativeTarget "ScrumMeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBCDD0B2A8888AF00610DE8 /* Debug */,
+				EBBCDD0C2A8888AF00610DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBBCDD0D2A8888AF00610DE8 /* Build configuration list for PBXNativeTarget "ScrumMeetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBCDD0E2A8888AF00610DE8 /* Debug */,
+				EBBCDD0F2A8888AF00610DE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBBCDCDB2A8888AE00610DE8 /* Project object */;
+}
