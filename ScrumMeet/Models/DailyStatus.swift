@@ -9,7 +9,7 @@ import Foundation
 
 struct DailyStatus: Identifiable, Equatable {
     let id = UUID().uuidString
-    let teamMember: TeamMember
+    var teamMember: TeamMember
     var yesterday: String
     var today: String
     var blockers: String

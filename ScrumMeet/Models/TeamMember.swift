@@ -16,6 +16,12 @@ struct TeamMember: Identifiable, Equatable {
     }
 }
 
+extension TeamMember: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
 extension TeamMember {
     static let jp = TeamMember(name: "Juan Pablo Rodríguez", role: "Sr Staff Software Engineer")
     static let samuel = TeamMember(name: "Samuel Medina", role: "Software Engineer")

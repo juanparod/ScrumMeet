@@ -18,3 +18,24 @@ extension Meeting: Hashable {
         hasher.combine(id)
     }
 }
+
+extension Meeting {
+    static let listDemo = [
+        Meeting(
+            date: .aug7,
+            statuses: [
+                .demoJP,
+                .demoLuca,
+                .demoEmma,
+                .demoSamuel,
+                .demoEugenia,
+                .demoLiliana,
+                .demoAlvaro
+            ]
+        ),
+        Meeting(date: .aug8, statuses: [.demoLuca]),
+        Meeting(date: .aug9, statuses: []),
+        Meeting(date: .aug10, statuses: []),
+        Meeting(date: .aug11, statuses: [])
+    ]
+}

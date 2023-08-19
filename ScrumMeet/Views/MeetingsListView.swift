@@ -8,49 +8,60 @@
 import SwiftUI
 
 struct MeetingsListView: View {
-    @State var meetings = [
-        Meeting(
-            date: .aug7,
-            statuses: [
-                .demoJP,
-                .demoLuca,
-                .demoEmma,
-                .demoSamuel,
-                .demoEugenia,
-                .demoLiliana,
-                .demoAlvaro
-            ]
-        ),
-        Meeting(date: .aug8, statuses: [.demoLuca]),
-        Meeting(date: .aug9, statuses: []),
-        Meeting(date: .aug10, statuses: []),
-        Meeting(date: .aug11, statuses: [])
-    ]
+    @ObservedObject var viewModel = MeetingsListViewModel()
+    
+    init() {
+        print("MeetingsListView.init")
+    }
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $viewModel.navigationPath) {
             List {
-                ForEach(meetings) { meeting in
-                    NavigationLink(
-                        meeting.date.customFormat(),
-                        value: meeting
-                    )
+                ForEach(viewModel.meetings) { meeting in
+                    NavigationLink(value: NavigationPath.meeting(meeting)) {
+                        Text(meeting.date.customFormat())
+                    }
                 }
             }
-            .navigationDestination(for: Meeting.self) { meeting in
-                MeetingView(
-                    meeting: meeting
-                )
+            .navigationDestination(for: NavigationPath.self) { path in
+                switch path {
+                case let .meeting(meeting):
+                    getMeetingView(for: meeting)
+                case let .status(status):
+                    StatusView(
+                        viewModel: .init(
+                            status: status,
+                            delegate: viewModel.currentMeetingViewModel
+                        )
+                    )
+                }
             }
             .navigationTitle("Juntas diarias")
             .toolbar {
                 Button {
-                    
+                    viewModel.addMeetingButtonTapped()
                 } label: {
                     Image(systemName: "plus")
                 }
-
             }
+        }
+    }
+    
+    private func getMeetingView(for meeting: Meeting) -> some View {
+        if let vm = viewModel.currentMeetingViewModel {
+            vm.meeting = meeting
+            return MeetingView(
+                viewModel: vm
+            )
+        } else {
+            let vm = MeetingViewModel(
+                meeting: meeting,
+                delegate: viewModel
+            )
+            viewModel.currentMeetingViewModel = vm
+            return MeetingView(
+                viewModel: vm
+            )
         }
     }
 }
