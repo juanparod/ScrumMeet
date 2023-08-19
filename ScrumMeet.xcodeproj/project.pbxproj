@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		EB43BD7C2A8935AB0029CB25 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB43BD7B2A8935AB0029CB25 /* StatusView.swift */; };
 		EB7591472A90FED800DF87DE /* MeetingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7591462A90FED800DF87DE /* MeetingsListViewModel.swift */; };
-		EB7591492A9129C300DF87DE /* MeetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7591482A9129C300DF87DE /* MeetingViewModel.swift */; };
-		EB75914B2A91306B00DF87DE /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75914A2A91306B00DF87DE /* StatusViewModel.swift */; };
 		EBB4FCE62A89498D0023925E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4FCE52A89498D0023925E /* Date+Extension.swift */; };
 		EBBCDCE72A8888AE00610DE8 /* ScrumMeetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */; };
 		EBBCDCE92A8888AE00610DE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCE82A8888AE00610DE8 /* ContentView.swift */; };
@@ -46,8 +44,6 @@
 /* Begin PBXFileReference section */
 		EB43BD7B2A8935AB0029CB25 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		EB7591462A90FED800DF87DE /* MeetingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsListViewModel.swift; sourceTree = "<group>"; };
-		EB7591482A9129C300DF87DE /* MeetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewModel.swift; sourceTree = "<group>"; };
-		EB75914A2A91306B00DF87DE /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		EBB4FCE52A89498D0023925E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EBBCDCE32A8888AE00610DE8 /* ScrumMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumMeetApp.swift; sourceTree = "<group>"; };
@@ -95,8 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				EB7591462A90FED800DF87DE /* MeetingsListViewModel.swift */,
-				EB7591482A9129C300DF87DE /* MeetingViewModel.swift */,
-				EB75914A2A91306B00DF87DE /* StatusViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -136,8 +130,6 @@
 				EBB4FCE72A894B100023925E /* Extensions */,
 				EBBCDD132A88896500610DE8 /* Models */,
 				EBBCDD102A8888D200610DE8 /* Views */,
-				EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */,
-				EBBCDCE82A8888AE00610DE8 /* ContentView.swift */,
 				EBBCDCEA2A8888AF00610DE8 /* Assets.xcassets */,
 				EBBCDCEC2A8888AF00610DE8 /* Preview Content */,
 			);
@@ -172,6 +164,8 @@
 		EBBCDD102A8888D200610DE8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */,
+				EBBCDCE82A8888AE00610DE8 /* ContentView.swift */,
 				EBBCDD112A8888EE00610DE8 /* MeetingsListView.swift */,
 				EBBCDD1A2A88964F00610DE8 /* MeetingView.swift */,
 				EB43BD7B2A8935AB0029CB25 /* StatusView.swift */,
@@ -323,11 +317,9 @@
 				EBBCDD152A88897700610DE8 /* Meeting.swift in Sources */,
 				EB7591472A90FED800DF87DE /* MeetingsListViewModel.swift in Sources */,
 				EB43BD7C2A8935AB0029CB25 /* StatusView.swift in Sources */,
-				EB75914B2A91306B00DF87DE /* StatusViewModel.swift in Sources */,
 				EBBCDCE92A8888AE00610DE8 /* ContentView.swift in Sources */,
 				EBBCDD172A8889B500610DE8 /* TeamMember.swift in Sources */,
 				EBBCDCE72A8888AE00610DE8 /* ScrumMeetApp.swift in Sources */,
-				EB7591492A9129C300DF87DE /* MeetingViewModel.swift in Sources */,
 				EBBCDD192A888EC900610DE8 /* DailyStatus.swift in Sources */,
 				EBBCDD1B2A88964F00610DE8 /* MeetingView.swift in Sources */,
 				EBB4FCE62A89498D0023925E /* Date+Extension.swift in Sources */,

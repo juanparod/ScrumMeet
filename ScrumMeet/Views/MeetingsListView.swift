@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MeetingsListView: View {
-    @ObservedObject var viewModel = MeetingsListViewModel()
+    @EnvironmentObject var viewModel: MeetingsListViewModel
     
     init() {
         print("MeetingsListView.init")
@@ -18,22 +18,17 @@ struct MeetingsListView: View {
         NavigationStack(path: $viewModel.navigationPath) {
             List {
                 ForEach(viewModel.meetings) { meeting in
-                    NavigationLink(value: NavigationPath.meeting(meeting)) {
+                    NavigationLink(value: NavigationPath.meeting(meeting.id)) {
                         Text(meeting.date.customFormat())
                     }
                 }
             }
             .navigationDestination(for: NavigationPath.self) { path in
                 switch path {
-                case let .meeting(meeting):
-                    getMeetingView(for: meeting)
-                case let .status(status):
-                    StatusView(
-                        viewModel: .init(
-                            status: status,
-                            delegate: viewModel.currentMeetingViewModel
-                        )
-                    )
+                case let .meeting(id):
+                    MeetingView(id: id)
+                case let .status(id):
+                    StatusView(id: id)
                 }
             }
             .navigationTitle("Juntas diarias")
@@ -44,24 +39,6 @@ struct MeetingsListView: View {
                     Image(systemName: "plus")
                 }
             }
-        }
-    }
-    
-    private func getMeetingView(for meeting: Meeting) -> some View {
-        if let vm = viewModel.currentMeetingViewModel {
-            vm.meeting = meeting
-            return MeetingView(
-                viewModel: vm
-            )
-        } else {
-            let vm = MeetingViewModel(
-                meeting: meeting,
-                delegate: viewModel
-            )
-            viewModel.currentMeetingViewModel = vm
-            return MeetingView(
-                viewModel: vm
-            )
         }
     }
 }

@@ -11,6 +11,16 @@ struct Meeting: Identifiable, Equatable {
     let id = UUID().uuidString
     var date: Date
     var statuses: [DailyStatus]
+    
+    init(date: Date, statuses: [DailyStatus]) {
+        self.date = date
+        self.statuses = statuses
+    }
+    
+    init() {
+        self.date = Date()
+        self.statuses = []
+    }
 }
 
 extension Meeting: Hashable {

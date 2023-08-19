@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct StatusView: View {
-    @ObservedObject var viewModel: StatusViewModel
+    @EnvironmentObject var viewModel: MeetingsListViewModel
     private let participants = TeamMember.allTeam
+    let id: String
+    
+    init(id: String) {
+        self.id = id
+    }
     
     var body: some View {
         VStack {
-            Picker("Nombre:", selection: $viewModel.status.teamMember) {
+            Picker("Nombre:", selection: $viewModel.currentStatus.teamMember) {
                 Text("Seleccionar participante")
                 ForEach(participants) { participant in
                     Text(participant.name)
@@ -24,39 +29,29 @@ struct StatusView: View {
                 Text("¿Qué hice ayer?")
                     .font(.title)
                     .bold()
-                TextEditor(text: $viewModel.status.yesterday)
+                TextEditor(text: $viewModel.currentStatus.yesterday)
                     .multilineTextAlignment(.center)
             }
             VStack {
                 Text("¿Qué haré hoy?")
                     .font(.title)
                     .bold()
-                TextEditor(text: $viewModel.status.today)
+                TextEditor(text: $viewModel.currentStatus.today)
                     .multilineTextAlignment(.center)
             }
             VStack {
                 Text("Bloqueos")
                     .font(.title)
                     .bold()
-                TextEditor(text: $viewModel.status.blockers)
+                TextEditor(text: $viewModel.currentStatus.blockers)
                     .multilineTextAlignment(.center)
             }
         }
         .padding()
         .navigationTitle("Estatus")
         .navigationBarTitleDisplayMode(.inline)
-        //.navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    viewModel.backButtonTapped()
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("Junta")
-                    }
-                }
-            }
+        .onAppear {
+            viewModel.setStatus(for: id)
         }
     }
 }
@@ -64,12 +59,7 @@ struct StatusView: View {
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            StatusView(
-                viewModel: .init(
-                    status: .demoJP,
-                    delegate: nil
-                )
-            )
+            StatusView(id: DailyStatus.demoJP.id)
         }
     }
 }

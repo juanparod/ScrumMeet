@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct MeetingView: View {
-    @ObservedObject var viewModel: MeetingViewModel
+    @EnvironmentObject var viewModel: MeetingsListViewModel
     @State var selectedParticipant: String = ""
+    let id: String
+    
+    init(id: String) {
+        self.id = id
+    }
     
     var body: some View {
         let _ = Self._printChanges()
         List {
             Section {
                 HStack {
-                    DatePicker("Fecha:", selection: $viewModel.meeting.date)
+                    DatePicker("Fecha:", selection: $viewModel.currentMeeting.date)
                 }
             }
             Section {
-                ForEach(viewModel.meeting.statuses) { status in
-                    NavigationLink(value: NavigationPath.status(status)) {
+                ForEach(viewModel.currentMeeting.statuses) { status in
+                    NavigationLink(value: NavigationPath.status(status.id)) {
                         VStack(alignment: .leading, spacing: 5) {
                             Text(status.teamMember.name)
                             Text(status.teamMember.role)
@@ -29,7 +34,9 @@ struct MeetingView: View {
                         }
                     }
                 }
-                Button("Agregar estatus") {}
+                Button("Agregar estatus") {
+                    viewModel.addStatusButtonTapped()
+                }
             } header: {
                 HStack {
                     Image(systemName: "person.3.fill")
@@ -40,18 +47,8 @@ struct MeetingView: View {
         }
         .navigationTitle("Junta")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    viewModel.backButtonTapped()
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("Juntas")
-                    }
-                }
-            }
+        .onAppear {
+            viewModel.setMeeting(for: id)
         }
     }
 }
@@ -59,15 +56,7 @@ struct MeetingView: View {
 struct MeetingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            MeetingView(
-                viewModel: .init(
-                    meeting: Meeting(
-                        date: .aug7,
-                        statuses: [.demoJP]
-                    ),
-                    delegate: nil
-                )
-            )
+            MeetingView(id: Meeting.listDemo[0].id)
         }
     }
 }

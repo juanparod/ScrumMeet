@@ -13,6 +13,20 @@ struct DailyStatus: Identifiable, Equatable {
     var yesterday: String
     var today: String
     var blockers: String
+    
+    init(teamMember: TeamMember, yesterday: String, today: String, blockers: String) {
+        self.teamMember = teamMember
+        self.yesterday = yesterday
+        self.today = today
+        self.blockers = blockers
+    }
+    
+    init() {
+        self.teamMember = TeamMember(name: "", role: "")
+        self.yesterday = ""
+        self.today = ""
+        self.blockers = ""
+    }
 }
 
 extension DailyStatus: Hashable {
