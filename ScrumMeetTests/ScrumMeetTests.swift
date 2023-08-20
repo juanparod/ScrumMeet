@@ -10,27 +10,59 @@ import XCTest
 
 final class ScrumMeetTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_createMeeting() throws {
+        // Arrange
+        let viewModel = MeetingsListViewModel()
+
+        // Act
+        viewModel.createMeeting()
+
+        // Assert
+        XCTAssertEqual(viewModel.meetings.count, 1)
+        XCTAssertEqual(viewModel.navigationPath[0], .meeting(viewModel.meetings[0].id))
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_deleteMeeting() throws {
+        // Arrange
+        let viewModel = MeetingsListViewModel()
+        let meeting1 = Meeting()
+        let meeting2 = Meeting()
+        viewModel.meetings = [meeting1, meeting2]
+
+        // Act
+        viewModel.deleteMeeting(at: [0])
+
+        // Assert
+        XCTAssertEqual(viewModel.meetings.count, 1)
+        XCTAssertEqual(viewModel.meetings[0], meeting2)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_setCurrentMeeting() {
+        // Arrange
+        let viewModel = MeetingsListViewModel()
+        let meeting1 = Meeting()
+        let meeting2 = Meeting()
+        viewModel.meetings = [meeting1, meeting2]
+
+        // Act
+        viewModel.setMeeting(for: meeting2.id)
+
+        // Assert
+        XCTAssertEqual(viewModel.currentMeetingIndex, 1)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    func test_popNavigation() {
+        // Arrange
+        let viewModel = MeetingsListViewModel()
+        let meeting = NavigationPath.meeting("1")
+        let status = NavigationPath.status("A")
+        viewModel.navigationPath = [meeting, status]
 
+        // Act
+        viewModel.popNavigation()
+
+        // Assert
+        XCTAssertEqual(viewModel.navigationPath.count, 1)
+        XCTAssertEqual(viewModel.navigationPath.last, meeting)
+    }
 }
