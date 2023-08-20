@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct DailyStatus: Identifiable, Equatable {
-    let id = UUID().uuidString
+struct DailyStatus: Identifiable, Equatable, Codable {
+    var id = UUID().uuidString
     var teamMember: TeamMember
     var yesterday: String
     var today: String

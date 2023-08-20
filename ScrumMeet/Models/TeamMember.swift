@@ -7,12 +7,22 @@
 
 import Foundation
 
-struct TeamMember: Identifiable, Equatable {
+struct TeamMember: Identifiable, Equatable, Codable {
     var name: String
     var role: String
     
     var id: String {
         name
+    }
+    
+    init(name: String, role: String) {
+        self.name = name
+        self.role = role
+    }
+    
+    init() {
+        self.name = ""
+        self.role = ""
     }
 }
 

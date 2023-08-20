@@ -7,14 +7,21 @@
 
 import Foundation
 
-struct Meeting: Identifiable, Equatable {
-    let id = UUID().uuidString
+struct Meeting: Identifiable, Equatable, Codable {
+    var id = UUID().uuidString
     var date: Date
     var statuses: [DailyStatus]
     
     init(date: Date, statuses: [DailyStatus]) {
         self.date = date
         self.statuses = statuses
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.date = try container.decode(Date.self, forKey: .date)
+        self.statuses = try container.decodeIfPresent([DailyStatus].self, forKey: .statuses) ?? []
     }
     
     init() {

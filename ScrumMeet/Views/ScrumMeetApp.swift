@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct ScrumMeetApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(MeetingsListViewModel())
+                .environment(\.locale, Locale(identifier: "es_MX"))
         }
     }
 }

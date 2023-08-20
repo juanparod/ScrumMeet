@@ -5,13 +5,17 @@
 //  Created by Juan Pablo Rodriguez on 19/08/23.
 //
 
+import Combine
+import FirebaseDatabase
 import SwiftUI
 
 class MeetingsListViewModel: ObservableObject {
-    @Published var meetings: [Meeting] = Meeting.listDemo
+    @Published var meetings: [Meeting] = []
     @Published var navigationPath: [NavigationPath] = []
     @Published var currentMeetingIndex: Int?
     @Published var currentStatusIndex: Int?
+    private var cancellables = Set<AnyCancellable>()
+    
     var currentMeeting: Meeting {
         get {
             if let index = currentMeetingIndex {
@@ -38,6 +42,13 @@ class MeetingsListViewModel: ObservableObject {
                 currentMeeting.statuses[index] = newValue
             }
         }
+    }
+    
+    init() {
+        NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)
+            .sink(receiveValue: appWillResignActive)
+            .store(in: &cancellables)
+        
     }
     
     func addMeetingButtonTapped() {
@@ -86,6 +97,49 @@ class MeetingsListViewModel: ObservableObject {
     
     func popNavigation() {
         navigationPath.removeLast()
+    }
+    
+    func deleteMeeting(at indexSet: IndexSet) {
+        meetings.remove(atOffsets: indexSet)
+    }
+    
+    func onViewAppear() {
+        Task {
+            await getDataFromCloud()
+        }
+    }
+    
+    func saveDataToCloud() async {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(meetings)
+            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            let obj = json as? [[String: Any]]
+            try await Database.database().reference().setValue(obj)
+        }
+        catch {
+            print("Error saving data to cloud: \(error)")
+        }
+    }
+    
+    @MainActor
+    func getDataFromCloud() async {
+        do {
+            if let jsonObject = try await Database.database().reference().getData().value {
+                let data = try JSONSerialization.data(withJSONObject: jsonObject)
+                let decoder = JSONDecoder()
+                meetings = try decoder.decode([Meeting].self, from: data)
+            }
+        }
+        catch {
+            print("Error getting data from cloud: \(error)")
+        }
+    }
+    
+    func appWillResignActive(notification: Notification) {
+        Task {
+            await saveDataToCloud()
+        }
     }
 }
 

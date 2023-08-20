@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		EB43BD7C2A8935AB0029CB25 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB43BD7B2A8935AB0029CB25 /* StatusView.swift */; };
 		EB7591472A90FED800DF87DE /* MeetingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7591462A90FED800DF87DE /* MeetingsListViewModel.swift */; };
+		EB75914E2A916D6700DF87DE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EB75914D2A916D6700DF87DE /* FirebaseDatabase */; };
+		EB7591532A9172CD00DF87DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7591522A9172CD00DF87DE /* AppDelegate.swift */; };
+		EB7591552A91740600DF87DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7591542A91740600DF87DE /* GoogleService-Info.plist */; };
 		EBB4FCE62A89498D0023925E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4FCE52A89498D0023925E /* Date+Extension.swift */; };
 		EBBCDCE72A8888AE00610DE8 /* ScrumMeetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */; };
 		EBBCDCE92A8888AE00610DE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCDCE82A8888AE00610DE8 /* ContentView.swift */; };
@@ -44,6 +47,8 @@
 /* Begin PBXFileReference section */
 		EB43BD7B2A8935AB0029CB25 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		EB7591462A90FED800DF87DE /* MeetingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsListViewModel.swift; sourceTree = "<group>"; };
+		EB7591522A9172CD00DF87DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB7591542A91740600DF87DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBB4FCE52A89498D0023925E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EBBCDCE32A8888AE00610DE8 /* ScrumMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBCDCE62A8888AE00610DE8 /* ScrumMeetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumMeetApp.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB75914E2A916D6700DF87DE /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,15 @@
 				EB7591462A90FED800DF87DE /* MeetingsListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EB75914F2A91728500DF87DE /* System */ = {
+			isa = PBXGroup;
+			children = (
+				EB7591542A91740600DF87DE /* GoogleService-Info.plist */,
+				EB7591522A9172CD00DF87DE /* AppDelegate.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 		EBB4FCE72A894B100023925E /* Extensions */ = {
@@ -126,6 +141,7 @@
 		EBBCDCE52A8888AE00610DE8 /* ScrumMeet */ = {
 			isa = PBXGroup;
 			children = (
+				EB75914F2A91728500DF87DE /* System */,
 				EB489AD22A9083E400A84D64 /* ViewModels */,
 				EBB4FCE72A894B100023925E /* Extensions */,
 				EBBCDD132A88896500610DE8 /* Models */,
@@ -199,6 +215,9 @@
 			dependencies = (
 			);
 			name = ScrumMeet;
+			packageProductDependencies = (
+				EB75914D2A916D6700DF87DE /* FirebaseDatabase */,
+			);
 			productName = ScrumMeet;
 			productReference = EBBCDCE32A8888AE00610DE8 /* ScrumMeet.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +290,9 @@
 				Base,
 			);
 			mainGroup = EBBCDCDA2A8888AE00610DE8;
+			packageReferences = (
+				EB75914C2A916D6700DF87DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EBBCDCE42A8888AE00610DE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +311,7 @@
 			files = (
 				EBBCDCEE2A8888AF00610DE8 /* Preview Assets.xcassets in Resources */,
 				EBBCDCEB2A8888AF00610DE8 /* Assets.xcassets in Resources */,
+				EB7591552A91740600DF87DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7591532A9172CD00DF87DE /* AppDelegate.swift in Sources */,
 				EBBCDD122A8888EE00610DE8 /* MeetingsListView.swift in Sources */,
 				EBBCDD152A88897700610DE8 /* Meeting.swift in Sources */,
 				EB7591472A90FED800DF87DE /* MeetingsListViewModel.swift in Sources */,
@@ -409,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -463,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -489,7 +513,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,7 +543,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB75914C2A916D6700DF87DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB75914D2A916D6700DF87DE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB75914C2A916D6700DF87DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBBCDCDB2A8888AE00610DE8 /* Project object */;
 }

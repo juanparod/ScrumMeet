@@ -20,6 +20,7 @@ struct StatusView: View {
         VStack {
             Picker("Nombre:", selection: $viewModel.currentStatus.teamMember) {
                 Text("Seleccionar participante")
+                    .tag(TeamMember())
                 ForEach(participants) { participant in
                     Text(participant.name)
                         .tag(participant)

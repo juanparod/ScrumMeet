@@ -22,6 +22,9 @@ struct MeetingsListView: View {
                         Text(meeting.date.customFormat())
                     }
                 }
+                .onDelete { indexSet in
+                    viewModel.deleteMeeting(at: indexSet)
+                }
             }
             .navigationDestination(for: NavigationPath.self) { path in
                 switch path {
@@ -39,6 +42,9 @@ struct MeetingsListView: View {
                     Image(systemName: "plus")
                 }
             }
+        }
+        .onAppear {
+            viewModel.onViewAppear()
         }
     }
 }
